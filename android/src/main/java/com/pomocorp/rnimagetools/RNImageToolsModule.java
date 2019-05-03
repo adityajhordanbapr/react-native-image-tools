@@ -192,12 +192,12 @@ public class RNImageToolsModule extends ReactContextBaseJavaModule {
             AdobeImageIntent.Builder builder = new AdobeImageIntent.Builder(reactContext)
                     .setData(imageUri)
                     .withToolList(new ToolsFactory.Tools[]{
-                            CROP,
-                            ORIENTATION,
+                            // CROP,
+                            // ORIENTATION,
                             ENHANCE,
                             TEXT,
-                            DRAW,
-                            MEME,
+                            // DRAW,
+                            // MEME,
                             FOCUS,
                             VIGNETTE,
                             SHARPNESS,
@@ -208,12 +208,12 @@ public class RNImageToolsModule extends ReactContextBaseJavaModule {
                             PERSPECTIVE,
                             REDEYE,
                             WHITEN,
-                            BLEMISH,
-                            SPLASH,
+                            // BLEMISH,
+                            // SPLASH,
                             LIGHTING,
-                            OVERLAYS,
-                            FRAMES,
-                            STICKERS,
+                            // OVERLAYS,
+                            // FRAMES,
+                            // STICKERS,
                     })
                     .withOutputFormat(format)
                     .withOutputQuality(quality)
