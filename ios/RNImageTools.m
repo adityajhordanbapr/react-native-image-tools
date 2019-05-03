@@ -421,23 +421,23 @@ RCT_EXPORT_METHOD(loadThumbnails:(RCTPromiseResolveBlock)resolve
     [AdobeImageEditorCustomization setToolOrder:@[
         kAdobeImageEditorEnhance,        /* Enhance */
         kAdobeImageEditorEffects,        /* Effects */
-        kAdobeImageEditorStickers,       /* Stickers */
-        kAdobeImageEditorOrientation,    /* Orientation */
-        kAdobeImageEditorCrop,           /* Crop */
+        // kAdobeImageEditorStickers,       /* Stickers */
+        // kAdobeImageEditorOrientation,    /* Orientation */
+        // kAdobeImageEditorCrop,           /* Crop */
         kAdobeImageEditorColorAdjust,    /* Color */
         kAdobeImageEditorLightingAdjust, /* Lighting */
         kAdobeImageEditorSharpness,      /* Sharpness */
-        kAdobeImageEditorDraw,           /* Draw */
+        // kAdobeImageEditorDraw,           /* Draw */
         kAdobeImageEditorText,           /* Text */
         kAdobeImageEditorRedeye,         /* Redeye */
         kAdobeImageEditorWhiten,         /* Whiten */
-        kAdobeImageEditorBlemish,        /* Blemish */
+        // kAdobeImageEditorBlemish,        /* Blemish */
         kAdobeImageEditorBlur,           /* Blur */
-        kAdobeImageEditorMeme,           /* Meme */
-        kAdobeImageEditorFrames,         /* Frames */
+        // kAdobeImageEditorMeme,           /* Meme */
+        // kAdobeImageEditorFrames,         /* Frames */
         kAdobeImageEditorFocus,          /* TiltShift */
-        kAdobeImageEditorSplash,         /* ColorSplash */
-        kAdobeImageEditorOverlay,        /* Overlay */
+        // kAdobeImageEditorSplash,         /* ColorSplash */
+        // kAdobeImageEditorOverlay,        /* Overlay */
         kAdobeImageEditorVignette        /* Vignette */
     ]];
     
