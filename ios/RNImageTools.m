@@ -430,7 +430,7 @@ RCT_EXPORT_METHOD(loadThumbnails:(RCTPromiseResolveBlock)resolve
         // kAdobeImageEditorDraw,           /* Draw */
         kAdobeImageEditorText,           /* Text */
         kAdobeImageEditorRedeye,         /* Redeye */
-        kAdobeImageEditorWhiten,         /* Whiten */
+        // kAdobeImageEditorWhiten,         /* Whiten */
         // kAdobeImageEditorBlemish,        /* Blemish */
         kAdobeImageEditorBlur,           /* Blur */
         // kAdobeImageEditorMeme,           /* Meme */
