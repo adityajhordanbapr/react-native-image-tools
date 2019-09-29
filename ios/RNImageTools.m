@@ -64,11 +64,7 @@ RCT_EXPORT_METHOD(imageData:(NSString*)imageUri resolver:(RCTPromiseResolveBlock
 RCT_EXPORT_METHOD(authorize:(NSString*)clientId clientSecret:(NSString*) clientSecret redirectUri:(NSString*) redirectUri) {
     [[AdobeUXAuthManager sharedManager] setAuthenticationParametersWithClientID:clientId
                                                                    clientSecret:clientSecret
-                                                            additionalScopeList:@[AdobeAuthManagerUserProfileScope,
-                                                                                  AdobeAuthManagerEmailScope,
-                                                                                  AdobeAuthManagerAddressScope]];
-
-    [AdobeUXAuthManager sharedManager].redirectURL = [NSURL URLWithString:redirectUri];
+                                                                   enableSignUp:NO];
 }
 
 RCT_EXPORT_METHOD(checkImageLibraryPermission:(RCTPromiseResolveBlock)resolve
@@ -444,15 +440,16 @@ RCT_EXPORT_METHOD(loadThumbnails:(RCTPromiseResolveBlock)resolve
         // kAdobeImageEditorOverlay,        /* Overlay */
         kAdobeImageEditorVignette        /* Vignette */
     ]];
-    
-    AdobeUXImageEditorViewController* editor = [[AdobeUXImageEditorViewController alloc] initWithImage:image];
-    
-    //todo: set the options
-    
-    [self setController:editor];
-    [[self controller] setDelegate:self];
+
     
     dispatch_async(dispatch_get_main_queue(), ^{
+        AdobeUXImageEditorViewController* editor = [[AdobeUXImageEditorViewController alloc] initWithImage:image];
+
+        //todo: set the options
+
+        [self setController:editor];
+        [[self controller] setDelegate:self];
+
         UIViewController *root = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
         while (root.presentedViewController != nil) {
             root = root.presentedViewController;
